@@ -402,7 +402,7 @@ static NSString *const kSEGAnonymousIdFilename = @"segment.anonymousId";
         return YES;
     }
     if (options[key]) {
-        return [options[key] boolValue];
+        return ((NSDictionary *)options[key]).count;
     } else if (options[@"All"]) {
         return [options[@"All"] boolValue];
     } else if (options[@"all"]) {
